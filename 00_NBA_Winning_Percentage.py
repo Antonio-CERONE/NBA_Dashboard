@@ -167,6 +167,7 @@ initial_end_date = datetime(max_year, 12, 31)
 
 # Initialiser l'application Dash
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 
 # In[19]:
@@ -443,7 +444,7 @@ def update_figures(colorscale_value, selected_teams, start_date, end_date):
 # Exécuter l'application
 if __name__ == '__main__':
     # app.run_server(debug=True, port=8007) # If running  within an IDE but not within Notebook
-    app.run_server(debug=False, port=8007) # If running  within Jupyter Notebook but not within an IDE
+    app.run_server(debug=False) # If running  within Jupyter Notebook but not within an IDE
 
 
 # In[ ]:
